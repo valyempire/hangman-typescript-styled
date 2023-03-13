@@ -1,0 +1,12 @@
+.keyboard {
+  text-align: center;
+  display: inline-block;
+  width: 250px;
+  margin-top: 0;
+}
+
+.keyboard button:disabled {
+  background: #e90909;
+  color: #030000;
+  box-shadow: 0 6px #ba0000;
+}

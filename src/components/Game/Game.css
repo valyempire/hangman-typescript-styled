@@ -1,0 +1,36 @@
+.Hangman button {
+  border: none;
+  font-family: inherit;
+  font-size: 1rem;
+  cursor: pointer;
+  width: 30px;
+  margin: 5px 2px 2px 2px;
+  letter-spacing: 1px;
+  outline: none;
+  background: #00bcd4;
+  color: #fff;
+  box-shadow: 0 6px #0097a7;
+  border-radius: 5px;
+  padding-top: 4px;
+}
+
+.Hangman button:hover {
+  background-color: #0097a7;
+}
+
+.Hangman button:disabled {
+  pointer-events: none;
+  opacity: 0.65;
+}
+
+#reset {
+  width: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background: #9c27b0;
+  box-shadow: 0 6px #7b1fa2;
+}
+#reset:hover {
+  background: #7b1fa2;
+}
