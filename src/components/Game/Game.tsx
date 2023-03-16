@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
+
 /**
  * Imports styles
  */
-// import "./Game.css";
-// import "./Game.css";
 import { Container, MistakesContainer, WinnerContainer } from "./Game.styled";
 
 /**

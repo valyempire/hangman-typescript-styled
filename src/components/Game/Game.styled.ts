@@ -1,5 +1,8 @@
 import { styled } from "@mui/system";
 
+/**
+ * Styles the Container
+ */
 export const Container = styled("div")(() => {
   return {
     position: "relative",
@@ -48,6 +51,9 @@ export const Container = styled("div")(() => {
   };
 });
 
+/**
+ * Styles the MistakesContainer
+ */
 export const MistakesContainer = styled("div")(() => {
   return {
     color: "red",
@@ -56,6 +62,9 @@ export const MistakesContainer = styled("div")(() => {
   };
 });
 
+/**
+ * Styles the WinnerContainer
+ */
 export const WinnerContainer = styled("div")(() => {
   return {
     font: " 1.7rem rapscallion",
