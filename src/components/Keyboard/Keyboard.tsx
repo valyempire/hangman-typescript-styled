@@ -1,22 +1,31 @@
-import "./Keyboard.css";
+/**
+ * Imports styled
+ */
+import { Container } from "./Keyboard.styled";
+/**
+ * Imports types
+ */
 import { KeyboardProps } from "./Keyboard.types";
 
+/**
+ * Displays the component
+ */
 export const Keyboard: React.FC<KeyboardProps> = (props) => {
-  const { onClick } = props;
+  const { onClick, lettersPressed } = props;
 
   const nameletters = "abcdefghijklmnopqrstuvwxyz";
 
   return (
-    <div className="keyboard">
+    <Container className="keyboard">
       {nameletters.split("").map((letter, index) => (
         <button
           onClick={() => onClick(letter)}
-          className="keyboard"
           key={index}
+          disabled={lettersPressed.includes(letter)}
         >
           {letter}
         </button>
       ))}
-    </div>
+    </Container>
   );
 };

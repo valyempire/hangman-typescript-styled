@@ -1,4 +1,7 @@
-[
+/***
+ * Display the HangmanWords
+ */
+export const HangmanWords: string[] = [
   "able",
   "about",
   "absolute",
@@ -849,5 +852,5 @@
   "wrong",
   "year",
   "yesterday",
-  "young"
-]
+  "young",
+];

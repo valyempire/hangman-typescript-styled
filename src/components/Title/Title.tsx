@@ -1,3 +1,11 @@
+/**
+ * Imports styled
+ */
+import { TitleContainer } from "./Title.styled";
+
+/**
+ * Displays the component
+ */
 export const Title: React.FC = () => {
-  return <h1>Hangman</h1>;
+  return <TitleContainer>Hangman</TitleContainer>;
 };

@@ -1,12 +1,22 @@
-import { Game } from "./components/Game/Game";
-import "./App.css";
+/**
+ * Imports styles
+ */
+// import "./App.css";
 
-const App: React.FC = () => {
+import { AppContainer } from "./App.styled";
+
+/**
+ * Imports components
+ */
+import { Game } from "./components/Game/Game";
+
+/**
+ * Displays the component
+ */
+export const App: React.FC = () => {
   return (
-    <div className="App">
+    <AppContainer className="App">
       <Game />
-    </div>
+    </AppContainer>
   );
 };
-
-export default App;

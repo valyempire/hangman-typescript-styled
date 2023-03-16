@@ -1,18 +1,30 @@
 import React from "react";
+
+/**
+ * Imports types
+ */
 import { WordProps } from "./Word.types";
 
+/**
+ * Imports styled
+ */
+import { WordContainer } from "./Words.styled";
+
+/**
+ * Displays the component
+ */
 export const Word: React.FC<WordProps> = (props) => {
-  const { wordToGuess, formatLetter } = props;
+  const { wordToGuess, formatLetter, gameOver, lettersPressed } = props;
 
   const renderWord = () => {
     return wordToGuess.split("").map((letter: string, index: number) => {
       return (
         <span
           style={{
-            letterSpacing: "0.75em",
-            color: letter ? "green" : "red",
+            color:
+              gameOver && !lettersPressed.includes(letter) ? "red" : "dark",
           }}
-          key={index}
+          key={`${wordToGuess}_${index}`}
         >
           {formatLetter(letter, index)}
         </span>
@@ -20,5 +32,5 @@ export const Word: React.FC<WordProps> = (props) => {
     });
   };
 
-  return <div>{renderWord()}</div>;
+  return <WordContainer>{renderWord()}</WordContainer>;
 };

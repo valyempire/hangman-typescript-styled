@@ -1,4 +1,5 @@
-export interface LettersProps {
-  firstLetter: string[];
-  lastLetter: string[];
+export interface HistoryItem {
+  wordToGuess: string;
+  numberOfMistakes: number;
+  isWinner: boolean;
 }
