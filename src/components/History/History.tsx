@@ -17,9 +17,9 @@ export const History: React.FC<HistoryProps> = (props) => {
   const { history } = props;
 
   return (
-    <Container className="history">
-      <Title className="title-history">History:</Title>
-      <Display className="styled">
+    <Container>
+      <Title>History:</Title>
+      <Display>
         {history.map((historyItem: any, index: number) => (
           <div key={index} style={{ marginBottom: "10px" }}>
             <div> Word: {historyItem.wordToGuess}</div>

@@ -14,13 +14,9 @@ import { HistoryItem } from "./Game.types";
  * Imports components
  */
 import { Title } from "../Title";
-import { Images } from "../Images";
+import { GameDrawing } from "../GameDrawing";
 import { Keyboard } from "../Keyboard";
 import { History } from "../History";
-
-/**
- * Imports the word list
- */
 import { Word } from "../Word";
 
 /**
@@ -148,18 +144,18 @@ export const Game: React.FC = () => {
   };
 
   return (
-    <Container className="hangman">
+    <Container>
       <button id="reset" onClick={handleResetGame}>
         Reset
       </button>
       <History history={history} />
       <Title />
-      <WinnerContainer className="winner">
+      <WinnerContainer>
         <div>{gameOver && !isWinner && <h1>You Lose!</h1>}</div>
         <div>{isWinner && <h1>You Won!</h1>}</div>
       </WinnerContainer>
-      <Images numberOfMistakes={numberOfMistakes} />
-      <MistakesContainer className="mistakes">{`Numbers of mistakes: ${numberOfMistakes}`}</MistakesContainer>
+      <GameDrawing numberOfMistakes={numberOfMistakes} />
+      <MistakesContainer>{`Numbers of mistakes: ${numberOfMistakes}`}</MistakesContainer>
       <Word
         wordToGuess={wordToGuess}
         formatLetter={formatLetter}

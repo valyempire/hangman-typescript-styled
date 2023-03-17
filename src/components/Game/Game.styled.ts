@@ -69,7 +69,7 @@ export const WinnerContainer = styled("div")(() => {
   return {
     font: " 1.7rem rapscallion",
     color: "blue",
-    fontSize: "x-large",
+    fontSize: 22,
     fontWeight: "bold",
     margin: 0,
   };

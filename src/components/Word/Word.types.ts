@@ -7,3 +7,12 @@ export interface WordProps {
   gameOver: boolean;
   lettersPressed: string[];
 }
+
+/**
+ * Defines the component props interface
+ */
+export interface ColorLetterProps {
+  gameOver: boolean;
+  lettersPressed: string[];
+  letter: string;
+}

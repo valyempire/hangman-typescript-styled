@@ -16,7 +16,7 @@ export const Keyboard: React.FC<KeyboardProps> = (props) => {
   const nameletters = "abcdefghijklmnopqrstuvwxyz";
 
   return (
-    <Container className="keyboard">
+    <Container>
       {nameletters.split("").map((letter, index) => (
         <button
           onClick={() => onClick(letter)}

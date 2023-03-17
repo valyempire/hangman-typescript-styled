@@ -1,8 +1,6 @@
 /**
  * Imports styles
  */
-// import "./App.css";
-
 import { AppContainer } from "./App.styled";
 
 /**
@@ -15,7 +13,7 @@ import { Game } from "./components/Game/Game";
  */
 export const App: React.FC = () => {
   return (
-    <AppContainer className="App">
+    <AppContainer>
       <Game />
     </AppContainer>
   );

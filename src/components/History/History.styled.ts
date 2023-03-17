@@ -19,6 +19,9 @@ export const Container = styled("div")(() => {
   };
 });
 
+/**
+ * Styles the Title
+ */
 export const Title = styled("p")(() => {
   return {
     textDecoration: "underline",
@@ -27,6 +30,9 @@ export const Title = styled("p")(() => {
   };
 });
 
+/**
+ * Styles the Display
+ */
 export const Display = styled("div")(() => {
   return {
     maxHeight: 350,
