@@ -1,6 +1,6 @@
 /**
  * Defines the component props interface
  */
-export interface ImagesProps {
+export interface GameDrawingProps {
   numberOfMistakes: number;
 }

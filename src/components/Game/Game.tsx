@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
  * Imports styles
  */
 import { Container, MistakesContainer, WinnerContainer } from "./Game.styled";
-
+import { Button, Grid } from "@mui/material";
 /**
  * Imports types
  */
@@ -144,30 +144,67 @@ export const Game: React.FC = () => {
   };
 
   return (
-    <Container>
-      <button id="reset" onClick={handleResetGame}>
-        Reset
-      </button>
-      <History history={history} />
-      <Title />
-      <WinnerContainer>
-        <div>{gameOver && !isWinner && <h1>You Lose!</h1>}</div>
-        <div>{isWinner && <h1>You Won!</h1>}</div>
-      </WinnerContainer>
-      <GameDrawing numberOfMistakes={numberOfMistakes} />
-      <MistakesContainer>{`Numbers of mistakes: ${numberOfMistakes}`}</MistakesContainer>
-      <Word
-        wordToGuess={wordToGuess}
-        formatLetter={formatLetter}
-        gameOver={gameOver}
-        lettersPressed={lettersPressed}
-      />
+    // <Container>
+    //   <History history={history} />
+    //   <Title />
+    //   <button id="reset" onClick={handleResetGame}>
+    //     Reset
+    //   </button>
+    //   <WinnerContainer>
+    //     <div>{gameOver && !isWinner && <h1>You Lose!</h1>}</div>
+    //     <div>{isWinner && <h1>You Won!</h1>}</div>
+    //   </WinnerContainer>
+    //   <GameDrawing numberOfMistakes={numberOfMistakes} />
+    //   <MistakesContainer>{`Numbers of mistakes: ${numberOfMistakes}`}</MistakesContainer>
+    //   <Word
+    //     wordToGuess={wordToGuess}
+    //     formatLetter={formatLetter}
+    //     gameOver={gameOver}
+    //     lettersPressed={lettersPressed}
+    //   />
 
-      <div>
-        {!gameOver && (
-          <Keyboard onClick={handleClick} lettersPressed={lettersPressed} />
-        )}
-      </div>
+    //   <div>
+    //     {!gameOver && (
+    //       <Keyboard onClick={handleClick} lettersPressed={lettersPressed} />
+    //     )}
+    //   </div>
+    // </Container>
+
+    <Container className="hangman">
+      {/* <Grid item xs={12}> */}
+      <History history={history} />
+      {/* </Grid> */}
+      <Title />
+      <Grid container spacing={2}>
+        <Grid item xs={12}>
+          <Button id="reset" onClick={handleResetGame}>
+            Reset
+          </Button>
+          <WinnerContainer className="winner" variant="h1">
+            {gameOver && !isWinner ? "You Lose!!!" : null}
+            {isWinner ? "You Won!!!" : null}
+          </WinnerContainer>
+        </Grid>
+        <Grid item xs={12}>
+          <GameDrawing numberOfMistakes={numberOfMistakes} />
+        </Grid>
+        <Grid item xs={12}>
+          <MistakesContainer variant="body1">{`Numbers of mistakes: ${numberOfMistakes}`}</MistakesContainer>
+        </Grid>
+        <Grid item xs={12}>
+          <Word
+            wordToGuess={wordToGuess}
+            formatLetter={formatLetter}
+            gameOver={gameOver}
+            lettersPressed={lettersPressed}
+          />
+        </Grid>
+        <Grid item xs={12}>
+          {!gameOver && (
+            <Keyboard onClick={handleClick} lettersPressed={lettersPressed} />
+          )}
+        </Grid>
+      </Grid>
     </Container>
   );
 };

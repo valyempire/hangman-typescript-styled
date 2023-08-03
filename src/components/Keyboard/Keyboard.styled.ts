@@ -6,7 +6,7 @@ import { styled } from "@mui/system";
 /**
  * Styles the Title
  */
-export const Container = styled("div")(() => {
+export const Container = styled("div")(({ theme }) => {
   return {
     fontFamily: "sans-serif",
     textAlign: "center",
@@ -14,5 +14,11 @@ export const Container = styled("div")(() => {
     width: 306,
     marginTop: 0,
     marginBottom: 10,
+    [theme.breakpoints.down("md")]: {
+      width: "38%",
+    },
+    [theme.breakpoints.down("sm")]: {
+      width: "100%",
+    },
   };
 });

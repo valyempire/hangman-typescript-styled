@@ -1,16 +1,26 @@
 import { styled } from "@mui/system";
 
 /**
+ * Imports Material UI components
+ */
+import { Typography, Grid } from "@mui/material";
+
+/**
  * Styles the Container
  */
-export const Container = styled("div")(() => {
+export const Container = styled(Grid)(({ theme }) => {
   return {
+    height: "100vh",
+    width: "100%",
+    display: "flex",
+    alignItem: "center",
+    justifyContent: "center",
+    flexDirection: "column",
     position: "relative",
-    height: "100%",
-    width: 1000,
+    // height: "100%",
     color: "black",
     textAlign: "center",
-    zoom: "1.3",
+
     "& button": {
       border: "none",
       fontFamily: "inherit",
@@ -39,7 +49,6 @@ export const Container = styled("div")(() => {
       position: "absolute",
       width: "auto",
       marginLeft: 183,
-      marginTop: 332,
       background: " rgb(0, 8, 255)",
       boxShadow: "0 6px rgb(0, 129, 210)",
       transform: "rotate(20deg)",
@@ -48,29 +57,66 @@ export const Container = styled("div")(() => {
         color: "white",
       },
     },
+    [theme.breakpoints.down("md")]: {
+      display: "flex",
+      "& button": {
+        "&#reset": {
+          display: "flex",
+          position: "absolute",
+          width: "auto",
+          marginLeft: 531,
+          marginTop: 100,
+          transform: "rotate(8deg)",
+        },
+      },
+    },
+    [theme.breakpoints.down("sm")]: {
+      display: "flex",
+      "& button": {
+        "&#reset": {
+          display: "flex",
+          position: "absolute",
+          width: "auto",
+          marginLeft: 253,
+          marginTop: -15,
+          // marginRight: 30,
+          transform: "rotate(8deg)",
+          fontSize: 10,
+          padding: 4,
+        },
+      },
+    },
   };
 });
 
 /**
  * Styles the MistakesContainer
  */
-export const MistakesContainer = styled("div")(() => {
+export const MistakesContainer = styled(Typography)(({ theme }) => {
   return {
     color: "red",
     fontSize: "large",
     fontWeight: "bold",
+    [theme.breakpoints.down("sm")]: {
+      marginTop: 0,
+      fontSize: 20,
+    },
   };
 });
 
 /**
  * Styles the WinnerContainer
  */
-export const WinnerContainer = styled("div")(() => {
+export const WinnerContainer = styled(Typography)(({ theme }) => {
   return {
     font: " 1.7rem rapscallion",
     color: "blue",
-    fontSize: 22,
+    fontSize: 62,
     fontWeight: "bold",
     margin: 0,
+    [theme.breakpoints.down("sm")]: {
+      fontSize: 20,
+      marginBottom: 20,
+    },
   };
 });

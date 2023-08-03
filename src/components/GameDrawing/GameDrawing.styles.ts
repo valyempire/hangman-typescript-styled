@@ -12,5 +12,9 @@ export const ImgContainer = styled("img")(() => {
     height: 260,
     border: "10px solid white",
     boxShadow: "0 10px 30px rgba(0, 0, 0, 0.27)",
+    "@media (max-width: 391px)": {
+      width: "50%",
+      height: "50%",
+    },
   };
 });

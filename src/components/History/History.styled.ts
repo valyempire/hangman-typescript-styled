@@ -16,6 +16,22 @@ export const Container = styled("div")(() => {
     color: " red",
     fontSize: "large",
     fontWeight: "bold",
+
+    marginLeft: 250,
+    "@media (max-width: 820px)": {
+      marginLeft: 60,
+    },
+
+    "@media (max-width: 391px)": {
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      flexDirection: "column",
+      marginTop: -12,
+      height: 200,
+      marginLeft: -66,
+      fontSize: 10,
+    },
   };
 });
 
@@ -27,6 +43,10 @@ export const Title = styled("p")(() => {
     textDecoration: "underline",
     color: "dark",
     fontSize: " x-large",
+    "@media (max-width: 391px)": {
+      marginTop: 100,
+      fontSize: 18,
+    },
   };
 });
 
