@@ -144,32 +144,6 @@ export const Game: React.FC = () => {
   };
 
   return (
-    // <Container>
-    //   <History history={history} />
-    //   <Title />
-    //   <button id="reset" onClick={handleResetGame}>
-    //     Reset
-    //   </button>
-    //   <WinnerContainer>
-    //     <div>{gameOver && !isWinner && <h1>You Lose!</h1>}</div>
-    //     <div>{isWinner && <h1>You Won!</h1>}</div>
-    //   </WinnerContainer>
-    //   <GameDrawing numberOfMistakes={numberOfMistakes} />
-    //   <MistakesContainer>{`Numbers of mistakes: ${numberOfMistakes}`}</MistakesContainer>
-    //   <Word
-    //     wordToGuess={wordToGuess}
-    //     formatLetter={formatLetter}
-    //     gameOver={gameOver}
-    //     lettersPressed={lettersPressed}
-    //   />
-
-    //   <div>
-    //     {!gameOver && (
-    //       <Keyboard onClick={handleClick} lettersPressed={lettersPressed} />
-    //     )}
-    //   </div>
-    // </Container>
-
     <Container className="hangman">
       <Grid item xs={12}>
         <History history={history} />

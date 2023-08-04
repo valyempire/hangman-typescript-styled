@@ -17,7 +17,6 @@ export const Container = styled(Grid)(({ theme }) => {
     justifyContent: "center",
     flexDirection: "column",
     position: "relative",
-    // height: "100%",
     color: "black",
     textAlign: "center",
 
@@ -61,7 +60,7 @@ export const Container = styled(Grid)(({ theme }) => {
       display: "flex",
       "& button": {
         width: "17%",
-        // margin: "4px 4px 5px 3px",
+        fontSize: 19,
         "&#reset": {
           display: "flex",
           position: "absolute",
@@ -80,10 +79,8 @@ export const Container = styled(Grid)(({ theme }) => {
           display: "flex",
           position: "absolute",
           width: "auto",
-          // marginLeft: 235,
           marginLeft: 251,
-          marginTop: -15,
-          // marginRight: 30,
+          marginTop: 0,
           transform: "rotate(8deg)",
           fontSize: 10,
           padding: 4,

@@ -6,7 +6,7 @@ import { styled } from "@mui/system";
 /**
  * Styles the Container
  */
-export const Container = styled("div")(() => {
+export const Container = styled("div")(({ theme }) => {
   return {
     position: "absolute",
     left: "auto",
@@ -16,21 +16,21 @@ export const Container = styled("div")(() => {
     color: " red",
     fontSize: "large",
     fontWeight: "bold",
-
+    marginTop: 140,
     marginLeft: 250,
-    "@media (max-width: 820px)": {
+
+    [theme.breakpoints.down("md")]: {
       marginLeft: 14,
       marginTop: 197,
     },
-
-    "@media (max-width: 391px)": {
+    [theme.breakpoints.down("sm")]: {
       display: "flex",
       justifyContent: "center",
       alignItems: "center",
       flexDirection: "column",
       marginTop: -12,
       height: 200,
-      marginLeft: -66,
+      marginLeft: -62,
       fontSize: 10,
     },
   };
@@ -39,12 +39,13 @@ export const Container = styled("div")(() => {
 /**
  * Styles the Title
  */
-export const Title = styled("p")(() => {
+export const Title = styled("p")(({ theme }) => {
   return {
     textDecoration: "underline",
     color: "dark",
     fontSize: " x-large",
-    "@media (max-width: 391px)": {
+
+    [theme.breakpoints.down("sm")]: {
       marginTop: 100,
       fontSize: 18,
     },

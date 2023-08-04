@@ -25,10 +25,6 @@ export const WordContainer = styled("div")(({ theme }) => {
       marginTop: 10,
       fontSize: 20,
     },
-    // "@media (max-width: 391px)": {
-    //   marginTop: 10,
-    //   fontSize: 20,
-    // },
   };
 });
 
