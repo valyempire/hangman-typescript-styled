@@ -11,16 +11,24 @@ import { styled } from "@mui/system";
 /**
  * Styles the Container
  */
-export const WordContainer = styled("div")(() => {
+export const WordContainer = styled("div")(({ theme }) => {
   return {
     fontFamily: "sans-serif",
     letterSpacing: "1em",
-    margin: "0.2em -1em 0.2em 0",
+    margin: "5px 2px 2px 2px",
     fontSize: "2rem",
-    "@media (max-width: 391px)": {
+    [theme.breakpoints.down("md")]: {
+      marginTop: 10,
+      fontSize: 30,
+    },
+    [theme.breakpoints.down("sm")]: {
       marginTop: 10,
       fontSize: 20,
     },
+    // "@media (max-width: 391px)": {
+    //   marginTop: 10,
+    //   fontSize: 20,
+    // },
   };
 });
 

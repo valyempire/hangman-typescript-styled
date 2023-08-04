@@ -19,7 +19,8 @@ export const Container = styled("div")(() => {
 
     marginLeft: 250,
     "@media (max-width: 820px)": {
-      marginLeft: 60,
+      marginLeft: 14,
+      marginTop: 197,
     },
 
     "@media (max-width: 391px)": {

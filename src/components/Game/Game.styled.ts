@@ -60,11 +60,13 @@ export const Container = styled(Grid)(({ theme }) => {
     [theme.breakpoints.down("md")]: {
       display: "flex",
       "& button": {
+        width: "17%",
+        // margin: "4px 4px 5px 3px",
         "&#reset": {
           display: "flex",
           position: "absolute",
-          width: "auto",
-          marginLeft: 531,
+          width: "16%",
+          marginLeft: 609,
           marginTop: 100,
           transform: "rotate(8deg)",
         },
@@ -73,11 +75,13 @@ export const Container = styled(Grid)(({ theme }) => {
     [theme.breakpoints.down("sm")]: {
       display: "flex",
       "& button": {
+        width: "9%",
         "&#reset": {
           display: "flex",
           position: "absolute",
           width: "auto",
-          marginLeft: 253,
+          // marginLeft: 235,
+          marginLeft: 251,
           marginTop: -15,
           // marginRight: 30,
           transform: "rotate(8deg)",

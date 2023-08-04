@@ -15,7 +15,7 @@ export const Container = styled("div")(({ theme }) => {
     marginTop: 0,
     marginBottom: 10,
     [theme.breakpoints.down("md")]: {
-      width: "38%",
+      width: "70%",
     },
     [theme.breakpoints.down("sm")]: {
       width: "100%",
